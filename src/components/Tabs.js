@@ -14,15 +14,17 @@ function clicking(e){
 
 //console.log(tabs.tabs);
     return (
-        <ul>
-        {
-          array.map((value)=>{
-           return <li onClick={clicking}>{value.title}</li>
-          })
-        }
-        
-        <p>This is the content for {content}</p>
-        </ul>
+        <>
+            <ul>
+                {
+                array.map((value)=>{
+                return <li onClick={clicking}>{value.title}</li>
+                })
+                }
+                
+            </ul>
+            <p>This is the content for {content}</p>
+        </>
     )
 }
 
