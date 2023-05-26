@@ -23,7 +23,7 @@ function clicking(e){
                 }
                 
             </ul>
-            <p>This is the content for {content}</p>
+            <div>This is the content for {content}</div>
         </>
     )
 }
