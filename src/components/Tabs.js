@@ -5,7 +5,7 @@ function Tabs(tabs){
     let array = tabs.tabs;
 
     
-let [content,setcontent] = useState(array[0].title);
+let [content,setcontent] = useState("Tab 1");
 
 //console.log(tabs.tabs);
     return (
@@ -13,12 +13,12 @@ let [content,setcontent] = useState(array[0].title);
             <ul>
                 {
                 array.map((value)=>{
-                return <li onClick={(e)=>setcontent(e.target.innerText)}>{value.title}</li>
+                return <li onClick={()=>setcontent(value.contents)}>{value.title}</li>
                 })
                 }
                 
             </ul>
-            <div>This is the content for {content}</div>
+            <p>This is the content for {content}</p>
         </>
     )
 }
