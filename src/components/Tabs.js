@@ -7,18 +7,13 @@ function Tabs(tabs){
     
 let [content,setcontent] = useState(array[0].title);
 
-function clicking(e){
-  setcontent(e.target.innerText);
- // console.log(e.target.innerText);
-}
-
 //console.log(tabs.tabs);
     return (
         <>
             <ul>
                 {
                 array.map((value)=>{
-                return <li onClick={clicking}>{value.title}</li>
+                return <li onClick={(e)=>setcontent(e.target.innerText)}>{value.title}</li>
                 })
                 }
                 
